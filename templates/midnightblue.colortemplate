@@ -43,6 +43,7 @@ Color: white         #eeeeee                   ~         White
 
 ; extras:
 Color: brightwhite   #ffffff                   ~         White
+Color: brightyellow  #ffff64                   ~         LightYellow
 
 
 ; theme colors
@@ -69,6 +70,13 @@ Color:  bg3             #202040               235       DarkGrey
 Color:  bg4             #303050               236       DarkGrey
 Color:  bg5             #404060               ~         LightGrey
 
+; x11 rgb color names
+Color:  slategray3      #9FB6CD               ~         LightBlue    ; Comment
+Color:  deepskyblue     #00BFFF               ~         LightBlue    ; Function
+Color:  mediumpurple1   #AB82FF               ~         DarkMagenta  ; Constant
+Color:  violet          #EE82EE               ~         LightMagenta ; PreProc
+Color:  orange          #FFA500               ~         DarkYellow   ; Special
+Color:  lawngreen       #7CFC00               ~         LightGreen   ; Type
 
 ; }}}
 ; Terminal colors {{{
@@ -90,7 +98,6 @@ Define            -> PreProc
 Delimiter         -> Special
 Exception         -> Statement
 Float             -> Constant
-Function          -> Identifier
 Include           -> PreProc
 Keyword           -> Statement
 Label             -> Statement
@@ -182,16 +189,17 @@ VisualNOS            none              bg4
 WarningMsg           white             bg_main
 WildMenu             white             bg_main
 ; Other conventional group names (see `:help group-name`)
-Comment              white             none              italic
-Constant             white             none
+Comment              slategray3        none              italic
+Constant             mediumpurple1     none
 Error                white             bg_main           reverse
+Function             deepskyblue       none
 Identifier           white             none
 Ignore               white             none
-PreProc              white             none
-Special              white             none
-Statement            white             none
+PreProc              violet            none
+Special              orange            none
+Statement            brightyellow      none
 Todo                 white             none
-Type                 white             none
+Type                 lawngreen         none
 Underlined           white             none
 ; See `:help window-toolbar`
 ToolbarLine          none              bg_main
