@@ -57,6 +57,19 @@ Color: brightwhite   #ffffff                   ~         White
 ; main background
 Color:  bg_main         #0b0b35               17        DarkBlue
 
+; bg0: darker background
+Color:  bg0             #0a0a2a               ~         Black
+
+; bg1: brighter and colorful (more saturated) background
+Color:  bg1             #101050               ~         DarkBlue
+
+; bg2+: brighter but muted (less saturated) background
+Color:  bg2             #151530               234       DarkGrey
+Color:  bg3             #202040               235       DarkGrey
+Color:  bg4             #303050               236       DarkGrey
+Color:  bg5             #404060               ~         LightGrey
+
+
 ; }}}
 ; Terminal colors {{{
 
