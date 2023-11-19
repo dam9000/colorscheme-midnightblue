@@ -235,6 +235,20 @@ NormalFloat          white             bg1
 FloatTitle           deepskyblue       black
 FloatBorder          deepskyblue       bg_main
 
+; LSP, Treesitter groups
+; use ifdefs for Neovim:
+; vim does not support @ in group name and prints an error:
+; Error detected ... W18: Invalid character in group name
+#if has("nvim")
+  @punctuation       white             none
+  @property          paleturquoise     none
+  @field             -> @property
+  @lsp.type.property -> @property
+  @type.qualifier    -> Keyword
+  @variable.builtin  -> Special
+  @lsp.typemod.variable.defaultLibrary -> Special
+#endif
+
 ; }}}
 
 GitGutterAdd         lawngreen         bg2
