@@ -84,7 +84,7 @@ Character         -> Constant
 Conditional       -> Statement
 CurSearch         -> IncSearch
 CursorLineFold    -> FoldColumn
-CursorLineSign    -> SignColumn
+CursorLineSign    -> CursorLineNr
 Debug             -> Special
 Define            -> PreProc
 Delimiter         -> Special
@@ -137,12 +137,14 @@ Variant: gui 256 8
 #endif
 
 ; Group              Foreground        Background        Attributes
-ColorColumn          fg                bg_main
+ColorColumn          none              bg0
 Conceal              none              none
 Cursor               black             yellow
-CursorColumn         white             bg_main
-CursorLine           white             bg_main
-CursorLineNr         white             bg_main
+CursorColumn      -> CursorLine
+CursorLine           none              bg3
+CursorLineNr         silver            bg3
+LineNr               bg5               bg2
+SignColumn           bg5               bg2
 DiffAdd              white             bg_main           reverse
 DiffChange           white             bg_main           reverse
 DiffDelete           white             bg_main           reverse
@@ -153,7 +155,6 @@ ErrorMsg             white             bg_main           reverse
 FoldColumn           white             bg_main
 Folded               white             bg_main           italic
 IncSearch            white             bg_main           t=reverse g=standout
-LineNr               white             bg_main
 MatchParen           white             bg_main
 ModeMsg              white             bg_main
 MoreMsg              white             bg_main
@@ -164,7 +165,6 @@ PmenuSel             white             bg_main           reverse
 PmenuThumb           white             bg_main
 Question             white             bg_main
 Search               white             bg_main
-SignColumn           white             bg_main
 SpecialKey           white             bg_main
 SpellBad             white             bg_main           s=red
 SpellCap             white             bg_main           s=blue
