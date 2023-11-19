@@ -18,6 +18,34 @@ Option Prefix: midnightblue
 Include: midnightblue_help.colortemplate
 ; }}}
 
+Background: dark
+
+; Color palette {{{
+; Color name         GUI                     Base256     Base16 (optional)
+Color: black         rgb( 57,  71,  89)        ~         Black
+Color: red           rgb(255,   0,   0)        ~         DarkRed
+Color: green         rgb(  0, 255,   0)        ~         DarkGreen
+Color: yellow        rgb(255, 255,   0)        ~         DarkYellow
+Color: blue          rgb(  0,   0, 255)        ~         DarkBlue
+Color: magenta       rgb(255,   0, 255)        ~         DarkMagenta
+Color: cyan          rgb(  0, 255, 255)        ~         DarkCyan
+Color: white         rgb(235, 235, 235)        ~         LightGrey
+Color: brightblack   rgb(210, 210, 210)        ~         DarkGrey
+Color: brightred     rgb(255, 100,   0)        ~         LightRed
+Color: brightgreen   rgb(100, 255,   0)        ~         LightGreen
+Color: brightyellow  rgb(255, 255, 100)        ~         LightYellow
+Color: brightblue    rgb(  0, 100, 255)        ~         LightBlue
+Color: brightmagenta rgb(255, 100, 255)        ~         LightMagenta
+Color: brightcyan    rgb(100, 255, 255)        ~         LightCyan
+; You may use hexadecimal values, too, and you may provide an explicit base-256 color:
+Color: brightwhite   #e0e0ed                  231        White
+; }}}
+; Terminal colors {{{
+Term colors: black red green yellow blue magenta cyan white
+Term colors: brightblack brightred brightgreen brightyellow
+Term colors: brightblue brightmagenta brightcyan brightwhite
+; }}}
+
 ; Common linked groups {{{
 Boolean           -> Constant
 Character         -> Constant
@@ -58,34 +86,6 @@ Tag               -> Special
 Typedef           -> Type
 ; See `:help lCursor`
 lCursor           -> Cursor
-; }}}
-
-Background: dark
-
-; Color palette {{{
-; Color name         GUI                     Base256     Base16 (optional)
-Color: black         rgb( 57,  71,  89)        ~         Black
-Color: red           rgb(255,   0,   0)        ~         DarkRed
-Color: green         rgb(  0, 255,   0)        ~         DarkGreen
-Color: yellow        rgb(255, 255,   0)        ~         DarkYellow
-Color: blue          rgb(  0,   0, 255)        ~         DarkBlue
-Color: magenta       rgb(255,   0, 255)        ~         DarkMagenta
-Color: cyan          rgb(  0, 255, 255)        ~         DarkCyan
-Color: white         rgb(235, 235, 235)        ~         LightGrey
-Color: brightblack   rgb(210, 210, 210)        ~         DarkGrey
-Color: brightred     rgb(255, 100,   0)        ~         LightRed
-Color: brightgreen   rgb(100, 255,   0)        ~         LightGreen
-Color: brightyellow  rgb(255, 255, 100)        ~         LightYellow
-Color: brightblue    rgb(  0, 100, 255)        ~         LightBlue
-Color: brightmagenta rgb(255, 100, 255)        ~         LightMagenta
-Color: brightcyan    rgb(100, 255, 255)        ~         LightCyan
-; You may use hexadecimal values, too, and you may provide an explicit base-256 color:
-Color: brightwhite   #e0e0ed                  231        White
-; }}}
-; Terminal colors {{{
-Term colors: black red green yellow blue magenta cyan white
-Term colors: brightblack brightred brightgreen brightyellow
-Term colors: brightblue brightmagenta brightcyan brightwhite
 ; }}}
 
 ; Default highlight groups {{{
