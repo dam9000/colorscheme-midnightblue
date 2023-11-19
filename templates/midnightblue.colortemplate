@@ -45,6 +45,9 @@ Color: white         #eeeeee                   ~         White
 Color: brightwhite   #ffffff                   ~         White
 
 
+; theme colors
+Color: bg_main       #000000                   ~         Black
+
 ; }}}
 ; Terminal colors {{{
 
@@ -104,59 +107,59 @@ Variant: gui 256 8
     Normal           white             none
     Terminal         white             none
 #else
-    Normal           white             black
-    Terminal         white             black
+    Normal           white             bg_main
+    Terminal         white             bg_main
 #endif
 
 ; Group              Foreground        Background        Attributes
-ColorColumn          fg                black
+ColorColumn          fg                bg_main
 Conceal              none              none
-Cursor               white             black
-CursorColumn         white             black
-CursorLine           white             black
-CursorLineNr         white             black
-DiffAdd              white             black             reverse
-DiffChange           white             black             reverse
-DiffDelete           white             black             reverse
-DiffText             white             black             bold,reverse
-Directory            white             black
-EndOfBuffer          white             black
-ErrorMsg             white             black             reverse
-FoldColumn           white             black
-Folded               white             black             italic
-IncSearch            white             black             t=reverse g=standout
-LineNr               white             black
-MatchParen           white             black
-ModeMsg              white             black
-MoreMsg              white             black
-NonText              white             black
-Pmenu                white             black
-PmenuSbar            white             black
-PmenuSel             white             black             reverse
-PmenuThumb           white             black
-Question             white             black
-Search               white             black
-SignColumn           white             black
-SpecialKey           white             black
-SpellBad             white             black             s=red
-SpellCap             white             black             s=blue
-SpellLocal           white             black             s=magenta
-SpellRare            white             black             s=cyan reverse
-StatusLine           white             black
-StatusLineNC         white             black
-TabLine              white             black
-TabLineFill          white             black
-TabLineSel           white             black
-Title                white             black
-VertSplit            white             black
-Visual               white             black
-VisualNOS            white             black
-WarningMsg           white             black
-WildMenu             white             black
+Cursor               white             bg_main
+CursorColumn         white             bg_main
+CursorLine           white             bg_main
+CursorLineNr         white             bg_main
+DiffAdd              white             bg_main           reverse
+DiffChange           white             bg_main           reverse
+DiffDelete           white             bg_main           reverse
+DiffText             white             bg_main           bold,reverse
+Directory            white             bg_main
+EndOfBuffer          white             bg_main
+ErrorMsg             white             bg_main           reverse
+FoldColumn           white             bg_main
+Folded               white             bg_main           italic
+IncSearch            white             bg_main           t=reverse g=standout
+LineNr               white             bg_main
+MatchParen           white             bg_main
+ModeMsg              white             bg_main
+MoreMsg              white             bg_main
+NonText              white             bg_main
+Pmenu                white             bg_main
+PmenuSbar            white             bg_main
+PmenuSel             white             bg_main           reverse
+PmenuThumb           white             bg_main
+Question             white             bg_main
+Search               white             bg_main
+SignColumn           white             bg_main
+SpecialKey           white             bg_main
+SpellBad             white             bg_main           s=red
+SpellCap             white             bg_main           s=blue
+SpellLocal           white             bg_main           s=magenta
+SpellRare            white             bg_main           s=cyan reverse
+StatusLine           white             bg_main
+StatusLineNC         white             bg_main
+TabLine              white             bg_main
+TabLineFill          white             bg_main
+TabLineSel           white             bg_main
+Title                white             bg_main
+VertSplit            white             bg_main
+Visual               white             bg_main
+VisualNOS            white             bg_main
+WarningMsg           white             bg_main
+WildMenu             white             bg_main
 ; Other conventional group names (see `:help group-name`)
 Comment              white             none              italic
 Constant             white             none
-Error                white             black             reverse
+Error                white             bg_main           reverse
 Identifier           white             none
 Ignore               white             none
 PreProc              white             none
@@ -168,8 +171,8 @@ Underlined           white             none
 ; See `:help CursorIM`
 CursorIM             none              fg
 ; See `:help window-toolbar`
-ToolbarLine          none              black
-ToolbarButton        white             black             bold
+ToolbarLine          none              bg_main
+ToolbarButton        white             bg_main           bold
 ; }}}
 
 ; Additional highlight groups {{{
