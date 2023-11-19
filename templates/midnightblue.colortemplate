@@ -1,4 +1,4 @@
-; vim: ft=colortemplate fdm=marker cc=22,40,58 et ts=2 sw=2
+; vim: ft=colortemplate fdm=marker cc=9,22,25,40,58 et ts=2 sw=2
 
 ; Information {{{
 ; Mandatory
@@ -46,7 +46,16 @@ Color: brightwhite   #ffffff                   ~         White
 
 
 ; theme colors
-Color: bg_main       #000000                   ~         Black
+
+; Color name            GUI                   Base256   Base16 (optional)
+; background alternatives
+;Color: x_darkblue      #00008B               ~         DarkBlue
+;Color: x_navy          #000080               ~         DarkBlue
+;Color: x_midnightblue  #191970               ~         DarkBlue
+;Color: d_midnightblue  #0b0b35               ~         DarkBlue  ; darker midnightblue
+
+; main background
+Color:  bg_main         #0b0b35               17        DarkBlue
 
 ; }}}
 ; Terminal colors {{{
