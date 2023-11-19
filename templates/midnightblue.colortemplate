@@ -229,6 +229,12 @@ ToolbarButton        black             deepskyblue       bold
 
 makeIdent         -> Property
 
+; Floating windows: used by completion preview, WhichKey,
+; NeoTree file preview, rename and other dialogs
+NormalFloat          white             bg1
+FloatTitle           deepskyblue       black
+FloatBorder          deepskyblue       bg_main
+
 ; }}}
 
 GitGutterAdd         lawngreen         bg2
