@@ -157,7 +157,7 @@ DiffChange           white             bg_main           reverse
 DiffDelete           white             bg_main           reverse
 DiffText             white             bg_main           bold,reverse
 Directory            white             bg_main
-EndOfBuffer          white             bg_main
+EndOfBuffer          blue              bg_main
 ErrorMsg             white             bg_main           reverse
 FoldColumn           white             bg_main
 Folded               white             bg_main           italic
@@ -165,7 +165,8 @@ IncSearch            black             cyan
 MatchParen           white             bg_main
 ModeMsg              white             bg_main
 MoreMsg              white             bg_main
-NonText              white             bg_main
+; NonText: used by set warp and showbreak
+NonText              green             bg3
 Pmenu                white             bg_main
 PmenuSbar            white             bg_main
 PmenuSel             white             bg_main           reverse
@@ -189,6 +190,7 @@ VisualNOS            none              bg4
 WarningMsg           white             bg_main
 WildMenu             white             bg_main
 ; Other conventional group names (see `:help group-name`)
+Whitespace           darkred           none
 Comment              slategray3        none              italic
 Constant             mediumpurple1     none
 Error                white             bg_main           reverse
