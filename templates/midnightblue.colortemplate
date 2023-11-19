@@ -154,7 +154,7 @@ EndOfBuffer          white             bg_main
 ErrorMsg             white             bg_main           reverse
 FoldColumn           white             bg_main
 Folded               white             bg_main           italic
-IncSearch            white             bg_main           t=reverse g=standout
+IncSearch            black             cyan
 MatchParen           white             bg_main
 ModeMsg              white             bg_main
 MoreMsg              white             bg_main
@@ -164,21 +164,21 @@ PmenuSbar            white             bg_main
 PmenuSel             white             bg_main           reverse
 PmenuThumb           white             bg_main
 Question             white             bg_main
-Search               white             bg_main
+Search               white             blue
 SpecialKey           white             bg_main
 SpellBad             white             bg_main           s=red
 SpellCap             white             bg_main           s=blue
 SpellLocal           white             bg_main           s=magenta
 SpellRare            white             bg_main           s=cyan reverse
-StatusLine           white             bg_main
-StatusLineNC         white             bg_main
+StatusLine           black             silver
+StatusLineNC         black             grey
 TabLine              white             bg_main
 TabLineFill          white             bg_main
 TabLineSel           white             bg_main
 Title                white             bg_main
-VertSplit            white             bg_main
-Visual               white             bg_main
-VisualNOS            white             bg_main
+VertSplit            black             grey
+Visual               none              bg5
+VisualNOS            none              bg4
 WarningMsg           white             bg_main
 WildMenu             white             bg_main
 ; Other conventional group names (see `:help group-name`)
