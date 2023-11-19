@@ -167,10 +167,10 @@ ModeMsg              white             bg_main
 MoreMsg              white             bg_main
 ; NonText: used by set warp and showbreak
 NonText              green             bg3
-Pmenu                white             bg_main
-PmenuSbar            white             bg_main
-PmenuSel             white             bg_main           reverse
-PmenuThumb           white             bg_main
+Pmenu                white             blue                      ; Popup menu
+PmenuSel             white             black             reverse ; Pmenu Selection
+PmenuSbar            black             grey                      ; Pmenu Scrollbar
+PmenuThumb           white             silver                    ; Pmenu Thumb of the Scrollbar
 Question             white             bg_main
 Search               white             blue
 SpecialKey           white             bg_main
