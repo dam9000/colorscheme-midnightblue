@@ -2,20 +2,20 @@
 
 ; Information {{{
 ; Mandatory
-Full name:     Dark
-Short name:    dark
-Author:        Myself <myself@somewhere.org>
+Full name:     Midnight Blue
+Short name:    midnightblue
+Author:        damjan.9000@gmail.com
 ; Optional
-Maintainer:    Myself <myself@somewhere.org>
-Website:       https://me.org
-Description:   Template for dark colorscheme
-License:       Public domain
+Maintainer:    damjan.9000@gmail.com
+Website:       https://github.com/dam9000/colorscheme-midnightblue
+Description:   A colorful scheme with a dark midnight blue background
+License:       Public domain (Unlicense)
 ; Prefix for options: short name is used if this key is not present:
-Option Prefix: dark
+Option Prefix: midnightblue
 ; }}}
 
 ; Documentation {{{
-Include: _help.colortemplate
+Include: midnightblue_help.colortemplate
 ; }}}
 
 ; Common linked groups {{{
