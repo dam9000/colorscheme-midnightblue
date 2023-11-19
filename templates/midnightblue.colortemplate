@@ -118,6 +118,9 @@ Tag               -> Special
 Typedef           -> Type
 ; See `:help lCursor`
 lCursor           -> Cursor
+; See `:help CursorIM`
+CursorIM          -> Cursor
+
 ; }}}
 
 ; Default highlight groups {{{
@@ -136,7 +139,7 @@ Variant: gui 256 8
 ; Group              Foreground        Background        Attributes
 ColorColumn          fg                bg_main
 Conceal              none              none
-Cursor               white             bg_main
+Cursor               black             yellow
 CursorColumn         white             bg_main
 CursorLine           white             bg_main
 CursorLineNr         white             bg_main
@@ -190,8 +193,6 @@ Statement            white             none
 Todo                 white             none
 Type                 white             none
 Underlined           white             none
-; See `:help CursorIM`
-CursorIM             none              fg
 ; See `:help window-toolbar`
 ToolbarLine          none              bg_main
 ToolbarButton        white             bg_main           bold
