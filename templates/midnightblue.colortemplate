@@ -158,26 +158,26 @@ DiffDelete           white             bg_main           reverse
 DiffText             white             bg_main           bold,reverse
 Directory            white             bg_main
 EndOfBuffer          blue              bg_main
-ErrorMsg             white             bg_main           reverse
+ErrorMsg             white             darkred
 FoldColumn           white             bg_main
 Folded               white             bg_main           italic
 IncSearch            black             cyan
 MatchParen           white             bg_main
 ModeMsg              white             bg_main
-MoreMsg              white             bg_main
+MoreMsg              orange            bg_main
 ; NonText: used by set warp and showbreak
 NonText              green             bg3
 Pmenu                white             blue                      ; Popup menu
 PmenuSel             white             black             reverse ; Pmenu Selection
 PmenuSbar            black             grey                      ; Pmenu Scrollbar
 PmenuThumb           white             silver                    ; Pmenu Thumb of the Scrollbar
-Question             white             bg_main
+Question             orange            bg_main
 Search               white             blue
 SpecialKey           white             bg_main
-SpellBad             white             bg_main           s=red
-SpellCap             white             bg_main           s=blue
-SpellLocal           white             bg_main           s=magenta
-SpellRare            white             bg_main           s=cyan reverse
+SpellBad             none              none              undercurl s=red
+SpellCap             none              none              undercurl s=magenta
+SpellLocal           none              none              undercurl s=yellow
+SpellRare            none              none              undercurl s=cyan
 StatusLine           black             silver
 StatusLineNC         black             grey
 TabLine              white             bg_main
@@ -187,13 +187,13 @@ Title                white             bg_main
 VertSplit            black             grey
 Visual               none              bg5
 VisualNOS            none              bg4
-WarningMsg           white             bg_main
+WarningMsg           violet            bg_main
 WildMenu             white             bg_main
 ; Other conventional group names (see `:help group-name`)
 Whitespace           darkred           none
 Comment              slategray3        none              italic
 Constant             mediumpurple1     none
-Error                white             bg_main           reverse
+Error                white             red               bold ;reverse
 Function             deepskyblue       none
 Identifier           white             none
 Ignore               white             none
