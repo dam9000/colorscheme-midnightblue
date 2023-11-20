@@ -248,6 +248,11 @@ FloatBorder          deepskyblue       bg_main
   @variable.builtin  -> Special
   @lsp.typemod.variable.defaultLibrary -> Special
 #endif
+; Ibl = Indent Blankline plugin
+IblIndent            bg3               none              ; vertical lines
+IblScope             bg4               none              ; current scope, vert+horiz
+;IblWhitespace
+
 
 ; }}}
 
