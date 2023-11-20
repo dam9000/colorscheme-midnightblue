@@ -77,6 +77,16 @@ Color:  mediumpurple1   #AB82FF               ~         DarkMagenta  ; Constant
 Color:  violet          #EE82EE               ~         LightMagenta ; PreProc
 Color:  orange          #FFA500               ~         DarkYellow   ; Special
 Color:  lawngreen       #7CFC00               ~         LightGreen   ; Type
+Color:  paleturquoise   #AFEEEE               ~         LightCyan
+Color:  skyblue         #87CEEB               ~         LightBlue
+;Color: steelblue       #4682B4               ~         LightBlue
+;Color: skyblue4        #4A708B               ~         LightBlue
+;Color: steelblue4      #36648B               ~         LightBlue
+
+; diff change background colors
+Color:  diffadd         #104020               ~         DarkGreen
+Color:  diffchange      #204070               ~         DarkCyan
+Color:  diffdelete      #601020               ~         DarkRed
 
 ; }}}
 ; Terminal colors {{{
@@ -152,9 +162,9 @@ CursorLine           none              bg3
 CursorLineNr         silver            bg3
 LineNr               bg5               bg2
 SignColumn           bg5               bg2
-DiffAdd              white             bg_main           reverse
-DiffChange           white             bg_main           reverse
-DiffDelete           white             bg_main           reverse
+DiffAdd              white             diffadd
+DiffChange           white             diffchange
+DiffDelete           white             diffdelete
 DiffText             white             bg_main           bold,reverse
 Directory            white             bg_main
 EndOfBuffer          blue              bg_main
@@ -212,6 +222,13 @@ ToolbarButton        white             bg_main           bold
 ; Additional highlight groups {{{
 ; Add additional highlight groups here if you want
 ; }}}
+
+GitGutterAdd         lawngreen         bg2
+GitGutterChange      skyblue           bg2
+GitGutterDelete      red               bg2
+GitSignsAdd          lawngreen         bg2
+GitSignsChange       skyblue           bg2
+GitSignsDelete       red               bg2
 
 ; B/W variant {{{
 Include: _bw.colortemplate
