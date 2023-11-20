@@ -152,9 +152,11 @@ Variant: 256 8
 Variant: gui 256 8
     Normal           white             none
     Terminal         white             none
+    EndOfBuffer      blue              none
 #else
     Normal           white             bg_main
     Terminal         white             bg_main
+    EndOfBuffer      blue              bg_main
 #endif
 
 ; Group              Foreground        Background        Attributes
@@ -171,7 +173,6 @@ DiffChange           white             diffchange
 DiffDelete           white             diffdelete
 DiffText             white             bg_main           bold,reverse
 Directory            white             bg_main
-EndOfBuffer          blue              bg_main
 ErrorMsg             white             darkred
 FoldColumn           white             bg_main
 Folded               white             bg_main           italic
