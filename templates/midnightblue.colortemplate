@@ -53,22 +53,25 @@ Color: brightyellow  #ffff64                   ~         LightYellow
 ;Color: x_darkblue      #00008B               ~         DarkBlue
 ;Color: x_navy          #000080               ~         DarkBlue
 ;Color: x_midnightblue  #191970               ~         DarkBlue
-;Color: d_midnightblue  #0b0b35               ~         DarkBlue  ; darker midnightblue
+;Color: d_midnightblue  #101035               ~         DarkBlue  ; darker midnightblue
 
 ; main background
-Color:  bg_main         #0b0b35               17        DarkBlue
+; if rgb colors are not available, the ctermbg 17 (darkblue) would be the
+; closest to d_midnightblue in color, however it is too bright. Instead
+; we'll use dark grey 234 which has about the same brightness as d_midnightblue
+Color:  bg_main         #101035               234       Black        ; Normal:bg
 
 ; bg0: darker background
-Color:  bg0             #0a0a2a               ~         Black
+Color:  bg0             #0a0a2a               233       Black        ; ColorColumn
 
 ; bg1: brighter and colorful (more saturated) background
-Color:  bg1             #101050               ~         DarkBlue
+Color:  bg1             #101040               ~         DarkBlue     ; NormalFloat
 
 ; bg2+: brighter but muted (less saturated) background
-Color:  bg2             #151530               234       DarkGrey
-Color:  bg3             #202040               235       DarkGrey
-Color:  bg4             #303050               236       DarkGrey
-Color:  bg5             #404060               ~         LightGrey
+Color:  bg2             #181838               235       DarkGrey     ; SignColumn:bg LineNr:bg CursorLine:bg
+Color:  bg3             #202040               236       DarkGrey     ; CursorLineNr:bg StatusLineNC:bg
+Color:  bg4             #303050               237       DarkGrey     ;
+Color:  bg5             #404060               ~         LightGrey    ; SignColumn:fg LineNr:fg StatusLine:bg Visual
 
 ; x11 rgb color names
 Color:  grey25          #404040               ~         Grey
@@ -164,7 +167,7 @@ ColorColumn          none              bg0
 Conceal              none              none
 Cursor               black             yellow
 CursorColumn      -> CursorLine
-CursorLine           none              bg3
+CursorLine           none              bg2
 CursorLineNr         silver            bg3
 LineNr               bg5               bg2
 SignColumn           bg5               bg2
@@ -193,8 +196,8 @@ SpellBad             none              none              undercurl s=red
 SpellCap             none              none              undercurl s=magenta
 SpellLocal           none              none              undercurl s=yellow
 SpellRare            none              none              undercurl s=cyan
-StatusLine           black             silver
-StatusLineNC         black             grey
+StatusLine           white             bg5
+StatusLineNC         bg5               bg3
 TabLineFill          black             grey32
 TabLine              black             grey38
 TabLineSel           black             grey
