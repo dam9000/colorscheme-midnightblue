@@ -71,6 +71,10 @@ Color:  bg4             #303050               236       DarkGrey
 Color:  bg5             #404060               ~         LightGrey
 
 ; x11 rgb color names
+Color:  grey25          #404040               ~         Grey
+Color:  grey32          #525252               ~         Grey
+Color:  grey38          #616161               ~         Grey
+Color:  grey44          #707070               ~         Grey
 Color:  slategray3      #9FB6CD               ~         LightBlue    ; Comment
 Color:  deepskyblue     #00BFFF               ~         LightBlue    ; Function
 Color:  mediumpurple1   #AB82FF               ~         DarkMagenta  ; Constant
@@ -190,9 +194,9 @@ SpellLocal           none              none              undercurl s=yellow
 SpellRare            none              none              undercurl s=cyan
 StatusLine           black             silver
 StatusLineNC         black             grey
-TabLine              white             bg_main
-TabLineFill          white             bg_main
-TabLineSel           white             bg_main
+TabLineFill          black             grey32
+TabLine              black             grey38
+TabLineSel           black             grey
 ; Title is used in :help titles, :set all title, tab number of open windows
 Title                deepskyblue       none
 VertSplit            black             grey
@@ -215,8 +219,8 @@ Todo                 black             cyan
 Type                 lawngreen         none
 Underlined           none              none              underline
 ; See `:help window-toolbar`
-ToolbarLine          none              bg_main
-ToolbarButton        white             bg_main           bold
+ToolbarLine          none              bg5
+ToolbarButton        black             deepskyblue       bold
 ; }}}
 
 ; Additional highlight groups {{{
