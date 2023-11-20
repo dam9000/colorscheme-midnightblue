@@ -162,7 +162,7 @@ ErrorMsg             white             darkred
 FoldColumn           white             bg_main
 Folded               white             bg_main           italic
 IncSearch            black             cyan
-MatchParen           white             bg_main
+MatchParen           none              none              underline s=yellow
 ModeMsg              white             bg_main
 MoreMsg              orange            bg_main
 ; NonText: used by set warp and showbreak
@@ -183,7 +183,8 @@ StatusLineNC         black             grey
 TabLine              white             bg_main
 TabLineFill          white             bg_main
 TabLineSel           white             bg_main
-Title                white             bg_main
+; Title is used in :help titles, :set all title, tab number of open windows
+Title                deepskyblue       none
 VertSplit            black             grey
 Visual               none              bg5
 VisualNOS            none              bg4
@@ -200,9 +201,9 @@ Ignore               white             none
 PreProc              violet            none
 Special              orange            none
 Statement            brightyellow      none
-Todo                 white             none
+Todo                 black             cyan
 Type                 lawngreen         none
-Underlined           white             none
+Underlined           none              none              underline
 ; See `:help window-toolbar`
 ToolbarLine          none              bg_main
 ToolbarButton        white             bg_main           bold
