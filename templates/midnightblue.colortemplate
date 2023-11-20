@@ -2,13 +2,13 @@
 
 ; Information {{{
 ; Mandatory
-Full name:     Midnight Blue
+Full name:     MidnightBlue
 Short name:    midnightblue
 Author:        damjan.9000@gmail.com
 ; Optional
 Maintainer:    damjan.9000@gmail.com
 Website:       https://github.com/dam9000/colorscheme-midnightblue
-Description:   A colorful scheme with a dark midnight blue background
+Description:   A colorful scheme with a dark midnightblue background
 License:       Public domain (Unlicense)
 ; Prefix for options: short name is used if this key is not present:
 Option Prefix: midnightblue
@@ -78,13 +78,29 @@ Color:  grey25          #404040               ~         Grey
 Color:  grey32          #525252               ~         Grey
 Color:  grey38          #616161               ~         Grey
 Color:  grey44          #707070               ~         Grey
-Color:  slategray3      #9FB6CD               ~         LightBlue    ; Comment
-Color:  deepskyblue     #00BFFF               ~         LightBlue    ; Function
-Color:  mediumpurple1   #AB82FF               ~         DarkMagenta  ; Constant
+Color:  grey54          #8A8A8A               245       Grey  ; Comment
+;Color: slategray       #708090               245       Grey  ; closest cterm:67, but 245 is better
+;Color: slategray4      #6C7B8B               ~         Grey
+;Color: lightslategray  #778899               ~         Grey
+;Color: slategray3      #9FB6CD               ~         LightBlue
+Color:  deepskyblue     #00BFFF               39        LightBlue    ; Title FloatTitle IncSearch
+Color:  dodgerblue      #1E90FF               ~         LightBlue    ; Function
+;Color: royalblue       #4169E1               ~         LightBlue
+;Color: cornflowerblue  #6495ED               ~         LightBlue
+;Color: lightsteelblue  #B0C4DE               ~         LightBlue
+;Color: mediumpurple1   #AB82FF               ~         DarkMagenta
+Color:  mediumpurple2   #9F79EE               ~         DarkMagenta  ; Constant
 Color:  violet          #EE82EE               ~         LightMagenta ; PreProc
 Color:  orange          #FFA500               ~         DarkYellow   ; Special
-Color:  lawngreen       #7CFC00               ~         LightGreen   ; Type
-Color:  paleturquoise   #AFEEEE               ~         LightCyan
+;Color: lawngreen       #7CFC00               ~         LightGreen
+Color:  limegreen       #32CD32               ~         LightGreen   ; Type, GitSignsAdd
+Color:  aquamarine3     #66CDAA               ~         DarkCyan     ; String
+;Color: seagreen3       #43CD80               ~         DarkCyan
+;Color: mediumseagreen  #3CB371               ~         DarkCyan
+;Color: seagreen        #2E8B57               ~         DarkCyan
+;Color: teal            #008080               ~         DarkCyan
+;Color: paleturquoise   #AFEEEE               ~         LightCyan
+Color:  cadetblue2      #8EE5EE               ~         LightCyan    ; Property
 Color:  skyblue         #87CEEB               ~         LightBlue
 ;Color: steelblue       #4682B4               ~         LightBlue
 ;Color: skyblue4        #4A708B               ~         LightBlue
@@ -136,7 +152,6 @@ SpecialComment    -> Special
 StatusLineTerm    -> StatusLine
 StatusLineTermNC  -> StatusLineNC
 StorageClass      -> Type
-String            -> Constant
 Structure         -> Type
 Tag               -> Special
 Typedef           -> Type
@@ -179,7 +194,7 @@ Directory            white             bg_main
 ErrorMsg             white             darkred
 FoldColumn           white             bg_main
 Folded               white             bg_main           italic
-IncSearch            black             cyan
+IncSearch            black             deepskyblue
 MatchParen           none              none              underline s=yellow
 ModeMsg              white             bg_main
 MoreMsg              orange            bg_main
@@ -203,24 +218,26 @@ TabLine              black             grey38
 TabLineSel           black             grey
 ; Title is used in :help titles, :set all title, tab number of open windows
 Title                deepskyblue       none
-VertSplit            black             grey
+VertSplit            silver            bg2
 Visual               none              bg5
 VisualNOS            none              bg4
 WarningMsg           violet            bg_main
 WildMenu             white             bg_main
 ; Other conventional group names (see `:help group-name`)
 Whitespace           darkred           none
-Comment              slategray3        none              italic
-Constant             mediumpurple1     none
+Comment              grey54            none              italic
+Constant             mediumpurple2     none
 Error                white             red               bold ;reverse
-Function             deepskyblue       none
+Function             dodgerblue        none
 Identifier           white             none
 Ignore               white             none
 PreProc              violet            none
 Special              orange            none
 Statement            brightyellow      none
+Property             cadetblue2        none
+String               aquamarine3       none
 Todo                 black             cyan
-Type                 lawngreen         none
+Type                 limegreen         none
 Underlined           none              none              underline
 ; See `:help window-toolbar`
 ToolbarLine          none              bg5
@@ -244,11 +261,12 @@ FloatBorder          deepskyblue       bg_main
 ; Error detected ... W18: Invalid character in group name
 #if has("nvim")
   @punctuation       white             none
-  @property          paleturquoise     none
-  @field             -> @property
-  @lsp.type.property -> @property
+  @property          -> Property
+  @field             -> Property
+  @lsp.type.property -> Property
   @type.qualifier    -> Keyword
   @variable.builtin  -> Special
+  @punctuation.special -> Special
   @lsp.typemod.variable.defaultLibrary -> Special
 #endif
 ; Ibl = Indent Blankline plugin
@@ -259,10 +277,10 @@ IblScope             bg4               none              ; current scope, vert+h
 
 ; }}}
 
-GitGutterAdd         lawngreen         bg2
+GitGutterAdd         limegreen         bg2
 GitGutterChange      skyblue           bg2
 GitGutterDelete      red               bg2
-GitSignsAdd          lawngreen         bg2
+GitSignsAdd          limegreen         bg2
 GitSignsChange       skyblue           bg2
 GitSignsDelete       red               bg2
 
