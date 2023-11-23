@@ -91,7 +91,19 @@ Color:  dodgerblue      #1E90FF               ~         LightBlue    ; Function
 ;Color: mediumpurple1   #AB82FF               ~         DarkMagenta
 Color:  mediumpurple2   #9F79EE               ~         DarkMagenta  ; Constant
 Color:  violet          #EE82EE               ~         LightMagenta ; PreProc
+;Color: hotpink         #FF69B4               ~         LightMagenta
+;Color: palevioletred   #DB7093               ~         LightMagenta
+;Color: firebrick       #B22222               ~         Red
+;Color: salmon          #FA8072               ~         LightMagenta
+;Color: lightsalmon     #FFA07A               ~         LightMagenta
+Color:  lightpink2      #EEA2AD               ~         LightMagenta ; mode:replace
+;Color: pink            #FFC0CB               ~         LightMagenta
+;Color: darkorange      #FF8C00               ~         DarkYellow
 Color:  orange          #FFA500               ~         DarkYellow   ; Special
+;Color: sandybrown      #F4A460               ~         DarkYellow
+Color:  burlywood       #DEB887               ~         DarkYellow   ; mode:command
+;Color: goldenrod       #DAA520               ~         DarkYellow
+;Color: gold            #FFD700               ~         DarkYellow
 ;Color: lawngreen       #7CFC00               ~         LightGreen
 Color:  limegreen       #32CD32               ~         LightGreen   ; Type, GitSignsAdd
 Color:  aquamarine3     #66CDAA               ~         DarkCyan     ; String
