@@ -226,6 +226,9 @@ ToolbarButton        black             deepskyblue       bold
 
 ; Additional highlight groups {{{
 ; Add additional highlight groups here if you want
+
+makeIdent         -> Property
+
 ; }}}
 
 GitGutterAdd         lawngreen         bg2
