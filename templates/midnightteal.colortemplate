@@ -1,0 +1,33 @@
+; vim: ft=colortemplate fdm=marker cc=9,22,25,40,58 et ts=2 sw=2
+
+; Information
+Full name:     MidnightBlue/Teal (v1.0)
+Short name:    midnightteal
+Description:   A colorful scheme with a dark midnightblue/teal background
+
+; Common Information
+Include: midnight_head.colortemplate
+
+; theme colors
+
+; Color name            GUI                   Base256   Base16 (optional)
+
+; main background
+; If rgb colors are not available, use grayscale cterm colors.
+; The automatic cterm color approximations are too bright for background colors.
+Color:  bg_main         #041628               234       Black        ; Normal:bg
+
+; bg0: darker background
+Color:  bg0             #031220               233       Black        ; ColorColumn
+
+; bg1: brighter and colorful (more saturated) background
+Color:  bg1             #041c35               ~         DarkBlue     ; NormalFloat
+
+; bg2+: brighter but muted (less saturated) background
+Color:  bg2             #0a1c2d               235       DarkGrey     ; SignColumn:bg LineNr:bg CursorLine:bg
+Color:  bg3             #0f2235               236       DarkGrey     ; CursorLineNr:bg StatusLineNC:bg
+Color:  bg4             #1b2f44               237       DarkGrey     ;
+Color:  bg5             #263d53               ~         LightGrey    ; SignColumn:fg LineNr:fg StatusLine:bg Visual
+
+; Common theme colors
+Include: midnight_tail.colortemplate

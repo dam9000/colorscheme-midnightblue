@@ -4,7 +4,7 @@
 
 COLORTEMPLATE = ../../vim-colortemplate
 
-VARIANTS = midnightblue
+VARIANTS = midnightblue midnightindigo midnightteal midnightgreen
 
 CSNAME = midnightblue
 
