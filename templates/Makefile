@@ -4,17 +4,18 @@
 
 COLORTEMPLATE = ../../vim-colortemplate
 
+VARIANTS = midnightblue
+
 CSNAME = midnightblue
 
 CSTMPL = $(CSNAME).colortemplate
 CSFILE = ../colors/$(CSNAME).vim
 CSHELP = ../doc/$(CSNAME).txt
-HELP_TMPL = $(CSNAME)_help.colortemplate
-LUA_CS_DIR = ../lua/colorscheme_$(CSNAME)
-COLORS_LUA = $(LUA_CS_DIR)/colors.lua
-COLORS_RGB_LUA = $(LUA_CS_DIR)/colorsrgb.lua
-COLORS_VIM_DIR = ../autoload/colorscheme_$(CSNAME)
-COLORS_VIM = $(COLORS_VIM_DIR)/colors.vim
+HELP_TMPL = midnight_help.colortemplate
+CS_LUA_DIR = ../lua/colorscheme_midnight_common
+COLORS_LUA = $(CS_LUA_DIR)/$(CSNAME)_colors.lua
+CS_VIM_DIR = ../autoload/colorscheme_midnight_common
+COLORS_VIM = $(CS_VIM_DIR)/$(CSNAME)_colors.vim
 
 # Neovim related changes
 
@@ -79,21 +80,12 @@ BEGIN {
   printf "let s:cc.%-16s = #{ gui: '%s', cterm: %d }\n", $$3, $$4, cterm
 }
 END {
-  print "function! colorscheme_$(CSNAME)#colors#get()"
+  print "function! colorscheme_midnight_common#$(CSNAME)_colors#get()"
   print "  return s:cc"
   print "endfunction"
 }
 endef
 export AWK_COLORS_VIM
-
-# generate colorsrgb.lua
-
-define AWK_COLORS_RGB_LUA
-BEGIN { print "return {" }
-/Color:/{ printf "  %-16s = '%s',\n", $$3, $$4 }
-END { print "}" }
-endef
-export AWK_COLORS_RGB_LUA
 
 # generate colors.lua
 
@@ -110,9 +102,15 @@ endef
 export AWK_COLORS_LUA
 
 
-.PHONY: all build
+.PHONY: all build_all update build 
 
-all: $(CSFILE)
+all:
+	@for CSNAME in $(VARIANTS); do $(MAKE) CSNAME=$$CSNAME update; done
+
+build_all:
+	@for CSNAME in $(VARIANTS); do $(MAKE) CSNAME=$$CSNAME build; done
+
+update: $(CSFILE)
 
 $(CSFILE): $(CSTMPL) $(HELP_TMPL) Makefile
 	@$(MAKE) build
@@ -122,17 +120,16 @@ build:
 		echo "Error: COLORTEMPLATE='$(COLORTEMPLATE)' not found"; \
 		exit 1; \
 	fi
+	@# colors/csname.vim
 	@echo "Generate: $(CSFILE)"
-	@echo
 	@rm -f "$(CSFILE)"
-	vim --not-a-term --clean -n \
+	@vim --not-a-term --clean -n \
 		--cmd ":set rtp+=$(COLORTEMPLATE)" \
 		--cmd ':set noswapfile' \
 		--cmd ":e! $(CSTMPL)" \
 		--cmd ':Colortemplate!' \
 		--cmd ':helptags ../doc' \
 		--cmd ':q!' >/dev/null
-	@echo
 	@echo "Process: $(CSFILE)"
 	@sed -i $(FIX_T_CO) $(CSFILE)
 	@sed -i $(FIX_TERMINAL_COLORS) $(CSFILE)
@@ -149,15 +146,21 @@ build:
 		--cmd ':q!' >/dev/null
 	@awk "$$AWK_REMAP" tmp.vim.out > tmp.cmap
 	@# colors.lua
-	@mkdir -p $(LUA_CS_DIR)
-	@#echo "Generate: $(COLORS_RGB_LUA)"
-	@#awk "$$AWK_COLORS_RGB_LUA" $(CSFILE) > $(COLORS_RGB_LUA)
+	@mkdir -p $(CS_LUA_DIR)
 	@echo "Generate: $(COLORS_LUA)"
 	@awk "$$AWK_COLORS_LUA" tmp.cmap $(CSFILE) > $(COLORS_LUA)
 	@# colors.vim
 	@echo "Generate: $(COLORS_VIM)"
-	@mkdir -p $(COLORS_VIM_DIR)
+	@mkdir -p $(CS_VIM_DIR)
 	@awk "$$AWK_COLORS_VIM" tmp.cmap $(CSFILE) > $(COLORS_VIM)
+	@# copy templates
+	@echo "Generate: ../autoload/airline/themes/$(CSNAME).vim"
+	@mkdir -p ../autoload/airline/themes/
+	@sed 's/(CSNAME)/$(CSNAME)/g' < airline_theme_template.vim > ../autoload/airline/themes/$(CSNAME).vim
+	@echo "Generate: ../lua/lualine/themes/$(CSNAME).lua"
+	@mkdir -p ../lua/lualine/themes
+	@sed 's/(CSNAME)/$(CSNAME)/g' < lualine_theme_template.lua > ../lua/lualine/themes/$(CSNAME).lua
 	@# cleanup
 	@rm -f tmp.*
+	@echo
 
