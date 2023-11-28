@@ -1,0 +1,22 @@
+; vim: ft=colortemplate fdm=marker cc=9,22,25,40,58 et ts=2 sw=2
+
+; Information {{{
+; Mandatory
+;;; Full name:     MidnightBlue
+;;; Short name:    midnightblue
+Author:        damjan.9000@gmail.com
+; Optional
+Maintainer:    damjan.9000@gmail.com
+Website:       https://github.com/dam9000/colorscheme-midnightblue
+;;; Description:   A colorful scheme with a dark midnightblue background
+License:       Public domain (Unlicense)
+; Prefix for options: short name is used if this key is not present:
+Option Prefix: midnightblue
+; }}}
+
+; Documentation {{{
+Include: midnight_help.colortemplate
+; }}}
+
+Background: dark
+
