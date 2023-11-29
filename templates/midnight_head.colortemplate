@@ -14,9 +14,5 @@ License:       Public domain (Unlicense)
 Option Prefix: midnightblue
 ; }}}
 
-; Documentation {{{
-Include: midnight_help.colortemplate
-; }}}
-
 Background: dark
 

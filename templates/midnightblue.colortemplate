@@ -8,6 +8,10 @@ Description:   A colorful scheme with a dark midnightblue background
 ; Common Information
 Include: midnight_head.colortemplate
 
+; Documentation {{{
+Include: midnight_help.colortemplate
+; }}}
+
 ; theme colors
 
 ; Color name            GUI                   Base256   Base16 (optional)
