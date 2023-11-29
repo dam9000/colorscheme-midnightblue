@@ -15,7 +15,7 @@ A colorful scheme with a dark midnightblue background for Vim and Neovim
 ### Supported plugins
 
 - Vim: GitGutter, airline
-- Neovim: GitSigns, lualine, Treesitter, LSP, Indent Blankline
+- Neovim: GitSigns, lualine, Treesitter, LSP, Indent Blankline, NeoTree
 
 ### Install
 

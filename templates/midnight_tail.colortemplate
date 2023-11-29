@@ -154,7 +154,7 @@ DiffAdd              white             diffadd
 DiffChange           white             diffchange
 DiffDelete           white             diffdelete
 DiffText             white             bg_main           bold,reverse
-Directory            white             bg_main
+Directory            white             none
 ErrorMsg             white             darkred
 FoldColumn           white             bg_main
 Folded               white             bg_main           italic
@@ -233,6 +233,7 @@ FloatBorder          deepskyblue       bg_main
   @punctuation.special -> Special
   @lsp.typemod.variable.defaultLibrary -> Special
 #endif
+
 ; Ibl = Indent Blankline plugin
 IblIndent            bg3               none              ; vertical lines
 IblScope             bg4               none              ; current scope, vert+horiz
@@ -244,6 +245,15 @@ GitGutterDelete      red               bg2
 GitSignsAdd          limegreen         bg2
 GitSignsChange       skyblue           bg2
 GitSignsDelete       red               bg2
+
+; NeoTreeCursorLine by default links to CursorLine
+; make it more prominent
+NeoTreeCursorLine    none              bg3
+; NeoTreeGit* by default links to GitGutter*
+; make the background transparent
+NeoTreeGitAdded      limegreen         none
+NeoTreeGitDeleted    red               none
+NeoTreeGitModified   skyblue           none
 
 ; }}}
 
