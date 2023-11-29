@@ -2,15 +2,15 @@
 
 A colorful scheme with a dark midnightblue background for Vim and Neovim
 
-### Sample screenshots
+![screenshot midnightblue variants](images/mb4.png)
 
-- Neovim (with lualine, Treesitter, LSP)
+### Variants
 
-![screenshot midnightblue neovim](images/mb-nvim14.png)
-
-- Vim (with airline)
-
-![screenshot midnightblue vim](images/mb-vim14.png)
+Four background color variants are available:
+- midnighblue (dark blue)
+- midnightindigo (dark indigo)
+- midnightteal (dark teal)
+- midnightgreen (dark green)
 
 ### Supported plugins
 
@@ -62,4 +62,5 @@ Example for Neovim:
 
 `vim.g.midnightblue_transp_bg = 1`
 
+(Note: all color variants use the same option name)
 
