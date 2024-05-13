@@ -1,9 +1,9 @@
-*midnightblue.txt*	For Vim 9.0 and Neovim 0.9	Last change: 2023 Dec 03
+*midnightblue.txt*	For Vim 9.1 and Neovim 0.9	Last change: 2024 May 16
 
 
-		  MidnightBlue (v1.1) color scheme    by damjan.9000@gmail.com
+		  MidnightBlue (v1.2) color scheme    by damjan.9000@gmail.com
 
-MidnightBlue (v1.1), A colorful scheme with a dark midnightblue background
+MidnightBlue (v1.2), A colorful scheme with a dark midnightblue background
 
 ==============================================================================
 Color scheme options					midnightblue-options*

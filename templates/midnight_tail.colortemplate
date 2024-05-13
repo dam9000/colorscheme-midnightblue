@@ -234,7 +234,15 @@ FloatBorder          deepskyblue       bg_main
   @variable.builtin  -> Special
   @punctuation.special -> Special
   @lsp.typemod.variable.defaultLibrary -> Special
+  LspReferenceWrite  -> Underlined
+  LspReferenceRead   -> Underlined
+  LspReferenceText   -> Underlined
 #endif
+
+; vim-illuminate
+IlluminatedWordText  -> Underlined
+IlluminatedWordRead  -> Underlined
+IlluminatedWordWrite -> Underlined
 
 ; Ibl = Indent Blankline plugin
 IblIndent            bg3               none              ; vertical lines

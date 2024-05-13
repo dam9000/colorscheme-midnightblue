@@ -14,7 +14,7 @@ Four background color variants are available:
 
 ### Supported plugins
 
-- Vim: GitGutter, airline
+- Vim: GitGutter, airline, vim-illuminate
 - Neovim: GitSigns, lualine, Treesitter, LSP, Indent Blankline, NeoTree,
   Telescope
 

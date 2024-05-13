@@ -12,6 +12,8 @@ CSTMPL = $(CSNAME).colortemplate
 CSFILE = ../colors/$(CSNAME).vim
 CSHELP = ../doc/$(CSNAME).txt
 HELP_TMPL = midnight_help.colortemplate
+HEAD_TMPL = midnight_head.colortemplate
+TAIL_TMPL = midnight_tail.colortemplate
 CS_LUA_DIR = ../lua/colorscheme_midnight_common
 COLORS_LUA = $(CS_LUA_DIR)/$(CSNAME)_colors.lua
 CS_VIM_DIR = ../autoload/colorscheme_midnight_common
@@ -112,7 +114,7 @@ build_all:
 
 update: $(CSFILE)
 
-$(CSFILE): $(CSTMPL) $(HELP_TMPL) Makefile
+$(CSFILE): $(CSTMPL) $(HEAD_TMPL) $(TAIL_TMPL) $(HELP_TMPL) Makefile
 	@$(MAKE) build
 
 build:
